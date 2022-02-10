@@ -55,4 +55,22 @@ class ProductManagerTest {
 
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void shouldReturnByNonExistentManufacturer() {
+
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("Samsung");
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    void shouldReturnByNonExistentProductName() {
+
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("Butter");
+
+        assertArrayEquals(expected, actual);
+    }
 }
